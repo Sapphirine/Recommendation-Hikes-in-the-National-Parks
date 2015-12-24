@@ -1,4 +1,4 @@
-package com.predictionmarketing.itemrecommender;
+package com.predictitemsimilarities.itemrecommender;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,9 +22,9 @@ public class ItemRecommender {
 
 	public static void main(String[] args) {
 		try {
-			
-	        DataModel dm = new FileDataModel(new File("data/grand-teton-hiking_trails_rating.csv"));
-			//DataModel dm = new FileDataModel(new File("data/glacier_park_hike_trails_ratings.csv"));
+			//DataModel dm = new FileDataModel(new File("data/yahoomovies.csv"));
+	        //DataModel dm = new FileDataModel(new File("data/grand-teton-hiking_trails_rating.csv"));
+			DataModel dm = new FileDataModel(new File("data/glacier_park_hike_trails_ratings.csv"));
 			ItemSimilarity sim = new LogLikelihoodSimilarity(dm);
 			//ItemSimilarity sim = new PearsonCorrelationSimilarity(dm);
 			//ItemSimilarity sim = new ETanimotoCoefficientSimilarity(dm);
