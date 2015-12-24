@@ -12,7 +12,7 @@ if (!empty($_GET['location'])){
   $lng = $maps_array['results'][0]['geometry']['location']['lng'];
 
   //Instagram API request 	
-  $instagramtag_url='https://api.instagram.com/v1/tags/nationalpark/media/recent?client_id=d49da08a520f47cbb6e7618f077f33ef&count=99';//tag national parks' images
+  $instagramtag_url='https://api.instagram.com/v1/tags/nationalpark/media/recent?access_token=ACCESS-TOKEN&count=99';//tag national parks' images
   $instagramtag_json = file_get_contents($instagramtag_url);
   $instagram_array = json_decode($instagramtag_json, true);
   $lat_plus = $lat+ 0.34;//200miles radius
